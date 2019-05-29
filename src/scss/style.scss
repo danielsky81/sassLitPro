@@ -1,10 +1,12 @@
 $body-bg: white;
 $div-prime-bg: black ;
-$body-txt-color: black;
+$div-secondary-bg: cyan;
+$body-txt-color: white;
+$body-txt-color-sec: black;
 
 body {
     background-color: $body-bg;
-    color: $body-txt-color;
+    color: $body-txt-color-sec;
     margin: 0;
 }
 
@@ -19,8 +21,7 @@ h1 {
     grid-template-rows: 250px 250px;
     grid-gap: 25px;
     background-color: $div-prime-bg;
-    // width: 90vw;
-    // margin: 0 auto;
+    height: 100vh;
     padding: 25px;
 
     div {
@@ -28,5 +29,37 @@ h1 {
        overflow: hidden;
        display: flex;
        justify-content: flex-end;
+       background-color: $div-secondary-bg;
+       cursor: pointer;
     }
+    img:hover {
+        opacity: .8;
+   }
+}
+
+.img-prev {
+    width: 100%;
+    position: absolute;
+    height: 100vh;
+    background-color: $div-prime-bg;
+    top: 0;
+    img {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #close {
+        color: $body-txt-color;
+        font-size: 30px;
+        font-weight: 900;
+        font-family: Arial, Helvetica, sans-serif;
+        float: right;
+        margin: 25px;
+        cursor: pointer;
+    }
+}
+
+.invisible {
+    display: none;
 }
